@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StageING - Bienvenue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#offres-stage">Offres de Stage</a></li>
+                <li><a href="#offres-pfe">Offres de PFE</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#se-connecter" id="connecter-btn">Se Connecter</a></li>
+                <li><a href="#creer-compte" id="creer-compte-btn">Créer un Compte</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section d'accueil -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>"Bienvenue chers étudiants sur StageING"</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Titre d'Offre, Domaine, Entreprises...">
+                <button>Rechercher</button>
+            </div>
+            <h2>Site pour tous</h2>
+
+            <!-- Image ajoutée sous le titre -->
+        
+        </div>
+    </header>
+
+    <!-- Modal "Se Connecter" -->
+    <div id="se-connecter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-connecter">&times;</span>
+            <h2>Se Connecter</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Mot de passe" required>
+                <button type="submit">Se Connecter</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal "Créer un Compte" -->
+    <div id="creer-compte-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-creer-compte">&times;</span>
+            <h2>Créer un Compte</h2>
+            <form>
+                <input type="text" placeholder="Nom" required>
+                <input type="text" placeholder="Prénom" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Mot de passe" required>
+                <button type="submit">Créer un Compte</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script pour ouvrir et fermer les modals -->
+    <script>
+        // Obtenez les modals
+        var modalConnecter = document.getElementById('se-connecter-modal');
+        var modalCreerCompte = document.getElementById('creer-compte-modal');
+
+        // Obtenez les boutons qui ouvrent les modals
+        var connecterBtn = document.getElementById('connecter-btn');
+        var creerCompteBtn = document.getElementById('creer-compte-btn');
+
+        // Obtenez les éléments <span> qui ferment les modals
+        var closeConnecter = document.getElementById('close-connecter');
+        var closeCreerCompte = document.getElementById('close-creer-compte');
+
+        // Lorsque l'utilisateur clique sur "Se Connecter", ouvrez le modal
+        connecterBtn.onclick = function() {
+            modalConnecter.style.display = "block";
+        }
+
+        // Lorsque l'utilisateur clique sur "Créer un Compte", ouvrez le modal
+        creerCompteBtn.onclick = function() {
+            modalCreerCompte.style.display = "block";
+        }
+
+        // Lorsque l'utilisateur clique sur <span> (x), fermez le modal
+        closeConnecter.onclick = function() {
+            modalConnecter.style.display = "none";
+        }
+
+        closeCreerCompte.onclick = function() {
+            modalCreerCompte.style.display = "none";
+        }
+
+        // Lorsque l'utilisateur clique en dehors du modal, fermez-le
+        window.onclick = function(event) {
+            if (event.target == modalConnecter) {
+                modalConnecter.style.display = "none";
+            }
+            if (event.target == modalCreerCompte) {
+                modalCreerCompte.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
