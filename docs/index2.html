@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #003366; /* Bleu foncé */
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar ul li {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00aced; /* Bleu clair au survol */
+}
+
+/* Section d'accueil */
+.hero {
+    background: url('hodii.jpg') no-repeat center center;
+
+    background-size: cover; /* Assure que l'image couvre toute la section */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    flex-direction: column; /* Pour aligner les éléments verticalement */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.hero-content .search-bar {
+    display: flex;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+.hero-content .search-bar input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.hero-content .search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.hero-content .search-bar button:hover {
+    background-color: #00aced; /* Bleu clair */
+}
+
+.hero-content h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0c045a; /* Bleu clair */
+}
+
+/* Image ajoutée sous le titre */
+.hero-content img {
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Formulaires */
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00aced;
+}
